@@ -14,4 +14,13 @@ Create a user named `ravi` with a non-interactive shell on App Server 3.
 To support limited-duration access for the Nautilus project, the system admin team at xFusionCorp Industries requires the creation of a temporary user account.
 
 **Task:**  
-Create a user named `javed` on App Server 1 in the Stratos Datacenter, with an expiry date of `2024-01-
+Create a user named `javed` on App Server 1 in the Stratos Datacenter, with an expiry date of `2024-01-28`.
+
+---
+
+## Day 03: Disable Direct SSH Root Login
+
+Following security audits, the xFusionCorp Industries security team has rolled out new protocols, including the restriction of direct root SSH login.
+
+**Task:**  
+Disable direct SSH root login on all app servers within the Stratos Datacenter.
