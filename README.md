@@ -24,3 +24,12 @@ Following security audits, the xFusionCorp Industries security team has rolled o
 
 **Task:**  
 Disable direct SSH root login on all app servers within the Stratos Datacenter.
+
+---
+
+## Day 04: Grant Executable Permissions to Backup Script
+
+In a bid to automate backup processes, the xFusionCorp Industries sysadmin team has developed a new bash script named `xfusioncorp.sh`. While the script has been distributed to all necessary servers, it lacks executable permissions on App Server 1 within the Stratos Datacenter.
+
+**Task:**  
+Grant executable permissions to the `/tmp/xfusioncorp.sh` script on App Server 1. Ensure that all users have the capability to execute this script.
