@@ -33,3 +33,12 @@ In a bid to automate backup processes, the xFusionCorp Industries sysadmin team 
 
 **Task:**  
 Grant executable permissions to the `/tmp/xfusioncorp.sh` script on App Server 1. Ensure that all users have the capability to execute this script.
+
+---
+
+## Day 05: Create a Service User Without Home Directory
+
+In response to the latest tool implementation at xFusionCorp Industries, the system admins require the creation of a service user account.
+
+**Task:**  
+Create a user named `mark` on App Server 2 in the Stratos Datacenter. This user should not have a home directory, as per the tool's requirements.
