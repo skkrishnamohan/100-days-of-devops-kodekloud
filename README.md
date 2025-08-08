@@ -42,3 +42,15 @@ In response to the latest tool implementation at xFusionCorp Industries, the sys
 
 **Task:**  
 Create a user named `mark` on App Server 2 in the Stratos Datacenter. This user should not have a home directory, as per the tool's requirements.
+
+---
+
+## Day 05a: Install and Permanently Disable SELinux
+
+Following a security audit, the xFusionCorp Industries security team has opted to enhance application and server security with SELinux. To initiate testing, the following requirements have been established for App Server 1 in the Stratos Datacenter.
+
+**Task:**  
+- Install the required SELinux packages.  
+- Permanently disable SELinux for the time being; it will be re-enabled after necessary configuration changes.  
+- No need to reboot the server, as a scheduled maintenance reboot is already planned for tonight.  
+- Disregard the current status of SELinux via the command line; the final status after the reboot should be
