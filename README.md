@@ -53,4 +53,15 @@ Following a security audit, the xFusionCorp Industries security team has opted t
 - Install the required SELinux packages.  
 - Permanently disable SELinux for the time being; it will be re-enabled after necessary configuration changes.  
 - No need to reboot the server, as a scheduled maintenance reboot is already planned for tonight.  
-- Disregard the current status of SELinux via the command line; the final status after the reboot should be
+- Disregard the current status of SELinux via the command line; the final status after the reboot should be checked.
+
+---
+
+## Day 06: Schedule a Cron Job for Root User
+
+The Nautilus system admins team has prepared scripts to automate several day-to-day tasks. They want them to be deployed on all app servers in Stratos DC on a set schedule. Before that, they need to test similar functionality with a sample cron job.
+
+**Task:**  
+- Install the `cronie` package on all Nautilus app servers and start the `crond` service.  
+- Add a cron job for the root user:  
+  `*/5 * * * * echo hello > /dev/null 2>&1`
