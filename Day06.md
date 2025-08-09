@@ -71,4 +71,4 @@ hello
 
 - Ensure the `crond` (or `cron`) service is running for the job to execute.
 - The job will overwrite `/tmp/cron_text` with `hello` every 5 minutes.
-- For help with cron syntax,
+- For help with cron syntax,visit [crontab.guru](https://crontab.guru/)
