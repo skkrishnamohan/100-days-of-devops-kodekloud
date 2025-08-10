@@ -65,3 +65,12 @@ The Nautilus system admins team has prepared scripts to automate several day-to-
 - Install the `cronie` package on all Nautilus app servers and start the `crond` service.  
 - Add a cron job for the root user:  
   `*/5 * * * * echo hello > /dev/null 2>&1`
+
+---
+
+## Day 07: Set Up Password-less SSH Access from Jump Host
+
+The system admins team of xFusionCorp Industries has set up scripts on the jump host that run at regular intervals and perform operations on all app servers in the Stratos Datacenter. To make these scripts work properly, the `thor` user on the jump host needs password-less SSH access to all app servers through their respective sudo users (i.e., `tony` for app server 1, `steve` for app server 2, and `banner` for app server 3).
+
+**Task:**  
+Set up password-less authentication from user `thor` on the jump host to all app servers through their respective sudo users.
