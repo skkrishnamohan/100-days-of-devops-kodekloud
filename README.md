@@ -74,3 +74,21 @@ The system admins team of xFusionCorp Industries has set up scripts on the jump 
 
 **Task:**  
 Set up password-less authentication from user `thor` on the jump host to all app servers through their respective sudo users.
+
+---
+
+## Day 08: Install Ansible 4.9.0 on Jump Host Using pip3
+
+During the weekly meeting, the Nautilus DevOps team discussed automation and configuration management solutions. After considering several options, the team decided to use Ansible due to its simple setup and minimal prerequisites. They want to start testing using Ansible, so the jump host will be used as an Ansible controller to run tasks on the other servers.
+
+**Task:**  
+Install Ansible version 4.9.0 on the jump host using `pip3` only. Make sure the Ansible binary is available globally on this system, so all users can run Ansible commands.
+
+---
+
+## Day 09: Fix MariaDB Initialization Issue on Database Server
+
+There is a critical issue going on with the Nautilus application in Stratos DC. The production support team identified that the application is unable to connect to the database. After investigation, the team found that the MariaDB service is down on the database server.
+
+**Task:**  
+Resolve the MariaDB initialization issue on the database server. MariaDB expects an empty data directory during initialization, but `/var/lib/mysql` already contains files—likely from a previous install or failed setup. Ensure MariaDB is properly
