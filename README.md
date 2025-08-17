@@ -91,4 +91,60 @@ Install Ansible version 4.9.0 on the jump host using `pip3` only. Make sure the 
 There is a critical issue going on with the Nautilus application in Stratos DC. The production support team identified that the application is unable to connect to the database. After investigation, the team found that the MariaDB service is down on the database server.
 
 **Task:**  
-Resolve the MariaDB initialization issue on the database server. MariaDB expects an empty data directory during initialization, but `/var/lib/mysql` already contains files—likely from a previous install or failed setup. Ensure MariaDB is properly
+Resolve the MariaDB initialization issue on the database server. MariaDB expects an empty data directory during initialization, but `/var/lib/mysql` already contains files—likely from a previous install or failed setup. Ensure MariaDB is properly initialized and running.
+
+---
+
+## Day 10: Automate Website Backup with Bash Script
+
+The production support team of xFusionCorp Industries is working on developing bash scripts to automate different day-to-day tasks. One requirement is to create a bash script for taking website backups. They have a static website running on App Server 2 in Stratos Datacenter, and need a script named `blog_backup.sh` to accomplish the following tasks. The script should be placed under `/scripts` directory on App Server 2.
+
+**Task:**  
+- Create a zip archive named `xfusioncorp_blog.zip` of `/var/www/html/blog` directory.
+- Save the archive in `/backup/` on App Server 2.
+- Copy the created archive to Nautilus Backup Server in `/backup/` location.
+- Ensure the script does not prompt for a password while copying the archive file.
+- The respective server user (e.g., `steve` for App Server 2) must be able to run it.
+
+---
+
+## Day 11: Deploy Java Application on Tomcat Server
+
+The Nautilus application development team recently finished the beta version of one of their Java-based applications, which they are planning to deploy on one of the app servers in Stratos DC. After an internal team meeting, they have decided to use the Tomcat application server.
+
+**Task:**  
+- Install Tomcat server on App Server 3.  
+- Configure it to run on port 8086.  
+- There is a `ROOT.war` file on the Jump host at location `/tmp`. Deploy it on this Tomcat server and make sure the webpage works directly on the base URL, i.e., `curl http://stapp03:8086`.
+
+---
+
+## Day 12: Fix Apache Service Unreachability on App Server
+
+Our monitoring tool has reported an issue in Stratos Datacenter. One of our app servers has an issue, as its Apache service is not reachable on port 8085 (which is the Apache port). The service itself could be down, the firewall could be at fault, or something else could be causing the issue. Use tools like telnet, netstat, etc. to find and fix the issue. Also make sure Apache is reachable from the jump host without compromising any security settings.
+
+**Task:**  
+Identify and fix the issue preventing Apache from being reachable on port 8085 from the jump host. Ensure Apache is running and accessible.
+
+---
+
+## Day 13: Secure Apache Port 8082 with iptables Firewall
+
+The security team at xFusionCorp Industries has raised a concern that Apache’s port 8082 is open for all since there is no firewall installed on the app hosts in Stratos DC. To address this, a security layer needs to be added.
+
+**Task:**  
+- Install iptables and all its dependencies on each app host.  
+- Block incoming port 8082 on all apps for everyone except for the LBR host (`172.16.238.14`).  
+- Make sure the rules remain, even after system reboot.
+
+---
+
+## Day 14: Fix Apache Service Unavailability on App Server
+
+The production support team of xFusionCorp Industries has deployed monitoring tools to keep an eye on every service, application, etc. running on the systems. One of the monitoring systems reported Apache service unavailability on one of the app servers in Stratos DC.
+
+**Task:**  
+Identify the faulty app host and fix the issue. Make sure Apache service is up and running on all app hosts. They might not have hosted any code yet on these servers, so you don’t need to worry if Apache isn’t serving any pages. Just make sure the service is up and running. Also, make sure Apache is running on port 8087 on all app hosts.
+
+---
+
