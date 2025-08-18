@@ -148,3 +148,14 @@ Identify the faulty app host and fix the issue. Make sure Apache service is up a
 
 ---
 
+## Day 15: Deploy Nginx with SSL on App Server 1
+
+The system admins team of xFusionCorp Industries needs to deploy a new application on App Server 1 in Stratos Datacenter. They have some prerequisites to get ready that server for application deployment.
+
+**Task:**  
+1. Install and configure nginx on App Server 1.  
+2. On App Server 1, there is a self-signed SSL certificate and key present at `/tmp/nautilus.crt` and `/tmp/nautilus.key`. Move them to an appropriate location and deploy the same in Nginx.  
+3. Create an `index.html` file with content `Welcome!` under Nginx document root.  
+4. For final testing, try to access the App Server 1 link (either hostname or IP) from jump host using curl command. For example:  
+   `curl -Ik https://<app-server-1-ip>`
+
